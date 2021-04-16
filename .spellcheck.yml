@@ -8,13 +8,17 @@ matrix:
         - .wordlist.txt
     pipeline:
       - pyspelling.filters.markdown:
-        comments: false
+        markdown_extensions:
+          - markdown.extensions.extra:
+      - pyspelling.filters.html:
+        comments: true
         attributes:
           - title
           - alt
         ignores:
-          - code
-          - pre
+          - ":matches(code, pre)"
+          - "code"
+          - "pre"
     sources:
       - "**/*.md"
     default_encoding: utf-8
