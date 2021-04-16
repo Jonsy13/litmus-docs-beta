@@ -1,47 +1,49 @@
 module.exports = {
   docs: {
     Introduction: [
-      "old-vs-new",
-      "diagram",
+      "introduction",
+      "architecture",
       // "feature-definition"
     ],
     "Getting Started": [
-      "prerequisite",      
+      "getstarted",
       {
-        "Installation": [
-          "litmus-install",
-          "agent-install"          
-        ],
+	      "Installation" : [ "litmus-install", "agent-install", "litmus-with-ingress"],
       },
+      "create-workflow",
+      "observe-workflow",
       {
-        "How To": [
-          "create",
-          "schedule",
-          "observe",
-        ],
+	      "Uninstallation" : [ "agent-uninstall", "litmus-uninstall" ],
       },
-      "uninstall",
     ],
-    Features: [
-      "gitops",
+    "User Guide": [
+      {
+        "Day 0": ["d0-create", "d0-observe"],
+      },
+      {
+        "Day 1": ["d1-schedule", "d1-update", "settings"],
+      },
+      {
+        "Day 2": ["myhub", "gitops", "probes"],
+      },
+    ],
+//    Features: [
+  //    "gitops",
+    //  "settings",
+     // "myhub",
       // "settings",
       // "analytics",
       // "myhub",
       // "external-agents"
-    ],
-    Concepts: [
-      "workflow",
-      //   "probes",
+    //],
+    //Concepts: [
+      //"probes",
       //   "cross-cloud-control",
       //   "litmusctl",
-      //   "crds",
+      // "crds",
       //   "rbac",
       //   "service-acounts",
-    ],
-    "Advanced Concepts": [
-      "admin-mode",
-      // "namespace-scope",
-      // "security"
-    ],
+   // ],
+    Advanced: ["admin-mode", "namespaced-mode", "litmus-psp"],
   },
 };
